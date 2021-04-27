@@ -1,0 +1,3 @@
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Learning C Programming Language.
+HELLO, WORLD.
