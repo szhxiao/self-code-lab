@@ -9,7 +9,7 @@
 import java.util.*;
 
 /**
- * The Collection.fill() & Collection.nCopies() methods
+ * A Collection filled with data using a generator object.
  */
 
 public class CollectionData<T> extends ArrayList {
