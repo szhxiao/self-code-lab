@@ -1,3 +1,5 @@
+![Linux是什么](../resources/images/01_linux是什么.png)
+
 # 第 1 章 Linux 是什么
 
 ## 1.1 Linux 是什么
