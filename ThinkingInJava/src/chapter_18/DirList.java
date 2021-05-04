@@ -6,9 +6,10 @@
  * @see http://www.MindView.net
  */
 
-import java.util.regex.*;
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.io.FilenameFilter;
+import java.util.Arrays;
+import java.util.regex.Pattern;
 
 /**
  * Display a directory listing using regular expressions.
@@ -42,13 +43,15 @@ public class DirList {
     }
 }
 
-/*
-output:
-Directory.java
-DirectoryDemo.java
-DirFilter.class
-DirList.class
-DirList.java
-PPrint.java
-ProcessFiles.java
-*/
+/**
+ * output:
+ * output:
+ * Directory.java
+ * DirectoryDemo.java
+ * DirFilter.class
+ * DirList.class
+ * DirList.java
+ * PPrint.java
+ * ProcessFiles.java
+ */
+

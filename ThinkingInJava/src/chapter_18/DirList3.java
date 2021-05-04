@@ -6,9 +6,10 @@
  * @see http://www.MindView.net
  */
 
-import java.util.regex.*;
-import java.io.*;
-import java.util.*;
+import java.io.File;
+import java.io.FilenameFilter;
+import java.util.Arrays;
+import java.util.regex.Pattern;
 
 /**
  * Building the anonymous inner class "in-place"
@@ -35,19 +36,7 @@ public class DirList3 {
     }
 }
 
-/*
-output:
-Directory.java
-DirectoryDemo.java
-DirFilter.class
-DirList.class
-DirList.java
-DirList2$1.class
-DirList2.class
-DirList2.java
-DirList3$1.class
-DirList3.class
-DirList3.java
-PPrint.java
-ProcessFiles.java
-*/
+/**
+ * output:
+ * 
+ */

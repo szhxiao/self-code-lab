@@ -1,12 +1,9 @@
-
 /**
- * Author: Bruce Eckel 
  * Thinking in Java
- * @version 4.0 
- */
-
-/**
  *
+ * @version 4th
+ * @author Bruce Eckel
+ * @see http://www.MindView.net
  */
 
 import java.io.*;
@@ -62,7 +59,7 @@ public class ProcessFiles {
     }
 }
 
-/*
-output:
-
-*/
+/**
+ * output:
+ * 
+ */

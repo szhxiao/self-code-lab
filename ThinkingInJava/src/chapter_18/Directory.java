@@ -1,18 +1,23 @@
-
 /**
- * Author: Bruce Eckel 
  * Thinking in Java
- * @version 4.0 
+ *
+ * @version 4th
+ * @author Bruce Eckel
+ * @see http://www.MindView.net
  */
+
+import java.io.File;
+import java.io.FilenameFilter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Iterator;
+import java.util.List;
+import java.util.regex.Pattern;
 
 /**
- *
+ * Produce a sequence of File objects that match a regular express
+ * in either a local directory, or by walking a directory tree.
  */
-
-import java.util.regex.*;
-import java.io.*;
-import java.util.*;
-
 public final class Directory {
     public static File[] local(File dir, final String regex) {
         return dir.listFiles(new FilenameFilter() {
@@ -85,21 +90,7 @@ public final class Directory {
     }
 }
 
-/*
-output:
-dirs: []
-
-files: [
-./.Directory.java.swp
-./.PPrint.java.swp
-./Directory$1.class
-./Directory$TreeInfo.class
-./Directory.class
-./Directory.java
-./DirFilter.class
-./DirList.class
-./DirList.java
-./PPrint.class
-./PPrint.java
-]
-*/
+/**
+ * output:
+ * 
+ */

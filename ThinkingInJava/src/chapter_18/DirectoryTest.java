@@ -1,17 +1,14 @@
-
 /**
- * Author: Bruce Eckel 
  * Thinking in Java
- * @version 4.0 
- */
-
-/**
  *
+ * @version 4th
+ * @author Bruce Eckel
+ * @see http://www.MindView.net
  */
 
 import java.io.*;
 
-public class DirectoryDemo {
+public class DirectoryTest {
     
     public static void main(String[] args) {
         PPrint.pprint(Directory.walk(".").dirs);
@@ -34,7 +31,7 @@ public class DirectoryDemo {
     }
 }
 
-/*
-output:
-
-*/
+/**
+ * output:
+ * 
+ */
