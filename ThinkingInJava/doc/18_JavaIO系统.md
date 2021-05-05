@@ -50,3 +50,26 @@ OutputStream 类型：
 | FileOutputStream      | 用于将信息写至文件                                                         | 构造器参数：字符串，表示文件名、文件或 FileDescriptor 对象；指定数据目的地：将其与 FilterOutputStream 对象相连以提供有用接口 |
 | PipedOutputStream     | 任何写入其中的信息都会自动作为相关 PipedInputStream 的输出，实现管道化概念 | 构造器参数：PipedInputStream;指定用于多线程的数据目的地：将其与 FilterOutputStream 对象相连以提供有用接口                    |
 | FilterOutputStream    | 抽象类，作为装饰器的接口                                                   |                                                                                                                              |
+
+## 18.3 添加属性和有用的接口
+
+FilterInputStream 和 FilterOutputStream 是用来提供装饰器类接口以控制特定输入流和输出流的两个类。
+
+### 18.3.1 通过 FilterInputStream 从 InputStream 读取数据
+
+FilterInputStream 类型：
+
+| 类                    | 功能                                                                 | 使用                                                                                              |
+| --------------------- | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
+| DataInputStream       | 与 DataOutputStream 搭配使用，可以按照可移植方式从流读取基本数据类型 | 构造器参数：InputStream;包含用于读取基本类型数据的全部接口                                        |
+| BufferedInputStream   | 防止每次读取时都进行实际写操作，代表“使用缓冲区”                     | 构造器参数：InputStream，可以指定缓冲区大小；本质上不提供接口，只不过是向进程中添加缓冲区所必需的 |
+| LineNumberInputStream | 跟踪输入流中的行号，可调用 getLineNumber()和 setLineNumber()         | 构造器参数：InputStream;仅增加了行号，可能要与接口对象搭配使用                                    |
+| PushbackInputStream   | 具有“能弹出一个字节的缓冲区”，可以将读到的最后一个字符回退           | 构造器参数：InputStream;通常作为编译器的扫描器                                                    |
+
+### 18.3.2 通过 FilterOutputStream 向 OutputStream 写入
+
+| 类                   | 功能                                                                  | 使用                                                        |
+| -------------------- | --------------------------------------------------------------------- | ----------------------------------------------------------- |
+| DataOutputStream     | 与 DataInputStream 搭配使用，可以按照可移植方式向流中写入基本类型数据 | 构造器参数：OutputStream;包含用于写入基本类型数据的全部接口 |
+| PrintStream          | 用于产生格式化输出                                                    | 构造器参数：OutputStream;可以指示是否在每次换行时清空缓冲区 |
+| BufferedOutputStream | 避免每次发送数据时都要时行实际的写操作，代表“使用缓冲区”              | 构造器参数：OutputStream;可以指定缓冲区大小                 |
