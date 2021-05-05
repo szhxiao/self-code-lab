@@ -16,3 +16,37 @@ File 类既能代表一个特定文件的名称，又能代表一个目录下的
 ### 18.1.3 目录的检查及创建
 
 可以用 File 对象来创建新的目录或尚不存在的整个目录路径。
+
+## 18.2 输入和输出
+
+**流**代表任何有能力产出数据的数据源对象或有能力接收数据的接收端对象，屏蔽了实际的 I/O 设备中处理数据的细节。
+
+Java 类库中的 I/O 类分成输入和输出两部分。
+
+### 18.2.1 InputStream 类型
+
+InputStream 的作用是表示那些**从不同数据源产生输入的类**。
+
+InputStream 类型：
+
+| 类                      | 功能                                                | 使用                                                                                                                                        |
+| ----------------------- | --------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------- |
+| ByteArrayInputStream    | 允许将内存的缓冲区当作 InputStream 使用             | 构造器参数：缓冲区，字节将从中取出; 作为数据源：将其与 FilterInputStream 对象相连以提供有用接口                                             |
+| StringBufferInputStream | 将 String 转换成 InputStream                        | 构造器参数：字符串；作为数据源：将其与 FilterInputStream 对象相连以提供有用接口                                                             |
+| FileInputStream         | 用于从文件中读取信息                                | 构造器参数：字符串，表示文件名、文件或 FileDescriptor 对象；作为数据源：将其与 FilterInputStream 对象相连以提供有用接口                     |
+| PipedInputStream        | 产生用于写入相关 PipedOutputStream 的数据           | 构造器参数：PipedOutputStream ;作为多线程中数据源：将其与 FilterInputStream 对象相连以提供有用接口                                          |
+| SequenceInputStream     | 将两个或多个 InputStream 对象转换成单一 InputStream | 构造器参数：两个 InputStream 对象或一个容纳 InputStream 对象的容器 Enumeration; 作为数据源：将其与 FilterInputStream 对象相连以提供有用接口 |
+| FilterInputStream       | 抽象类，作为装饰器的接口                            |                                                                                                                                             |
+
+### 18.2.2 OutputStream 类型
+
+决定输出所要去往的目标：字节数组、文件或管道。
+
+OutputStream 类型：
+
+| 类                    | 功能                                                                       | 使用                                                                                                                         |
+| --------------------- | -------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| ByteArrayOutputStream | 在内存中创建缓冲区，所有送往流的数据都要放置在此缓冲区                     | 构造器参数：缓冲区初始化尺寸；用于指定数据目的地：将其与 FilterOutputStream 对象相连以提供有用接口                           |
+| FileOutputStream      | 用于将信息写至文件                                                         | 构造器参数：字符串，表示文件名、文件或 FileDescriptor 对象；指定数据目的地：将其与 FilterOutputStream 对象相连以提供有用接口 |
+| PipedOutputStream     | 任何写入其中的信息都会自动作为相关 PipedInputStream 的输出，实现管道化概念 | 构造器参数：PipedInputStream;指定用于多线程的数据目的地：将其与 FilterOutputStream 对象相连以提供有用接口                    |
+| FilterOutputStream    | 抽象类，作为装饰器的接口                                                   |                                                                                                                              |
