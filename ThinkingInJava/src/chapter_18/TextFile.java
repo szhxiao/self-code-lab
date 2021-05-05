@@ -1,17 +1,23 @@
-
 /**
- * Author: Bruce Eckel 
  * Thinking in Java
- * @version 4.0 
+ *
+ * @version 4th
+ * @author Bruce Eckel
+ * @see http://www.MindView.net
  */
+
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.TreeSet;
 
 /**
- *
+ * Static functions for reading and writing text files.
  */
-
-import java.io.*;
-import java.util.*;
-
 public class TextFile extends ArrayList<String> {
     
     public static String read(String fileName) {
@@ -86,9 +92,7 @@ public class TextFile extends ArrayList<String> {
     }
 }
 
-/*
-output:
-[0, 4, ArrayList, Arrays, Author, Bruce, BufferedReader, Eckel, 
-File, FileReader, IOException, Java, PrintWriter, RuntimeException, 
-String, StringBuilder, System, TextFile, Thinking, TreeSet, W]
-*/
+/**
+ * output:
+ * 
+ */
