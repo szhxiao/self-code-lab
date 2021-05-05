@@ -1,15 +1,14 @@
-
 /**
- * Author: Bruce Eckel 
  * Thinking in Java
- * @version 4.0 
- */
-
-/**
  *
+ * @version 4th
+ * @author Bruce Eckel
+ * @see http://www.MindView.net
  */
 
-import java.io.*;
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.IOException;
 
 public class BufferedInputFile {
     
@@ -29,7 +28,7 @@ public class BufferedInputFile {
     }
 }
 
-/*
-output:
-
-*/
+/**
+ * output:
+ * 
+ */

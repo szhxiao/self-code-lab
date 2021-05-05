@@ -1,15 +1,18 @@
-
 /**
- * Author: Bruce Eckel 
  * Thinking in Java
- * @version 4.0 
- */
-
-/**
  *
+ * @version 4th
+ * @author Bruce Eckel
+ * @see http://www.MindView.net
  */
 
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
 
 public class StoringAndRecoveringData {
     
@@ -31,10 +34,10 @@ public class StoringAndRecoveringData {
     }
 }
 
-/*
-output:
-3.14159
-That was pi
-1.41413
-Square root of 2
-*/
+/**
+ * output:
+ * 3.14159
+ * That was pi
+ * 1.41413
+ * Square root of 2
+ */

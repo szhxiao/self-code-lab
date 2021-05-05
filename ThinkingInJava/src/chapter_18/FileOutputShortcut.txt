@@ -1,0 +1,35 @@
+1: /**
+2:  * Thinking in Java
+3:  *
+4:  * @version 4th
+5:  * @author Bruce Eckel
+6:  * @see http://www.MindView.net
+7:  */
+8: 
+9: import java.io.BufferedReader;
+10: import java.io.IOException;
+11: import java.io.PrintWriter;
+12: import java.io.StringReader;
+13: 
+14: public class FileOutputShortcut {
+15:     static String file = "FileOutputShortcut.txt";
+16: 
+17:     public static void main(String[] args) throws IOException {
+18:         BufferedReader in = new BufferedReader(new StringReader(
+19:                 BufferedInputFile.read("FileOutputShortcut.java")));
+20:         // short cut
+21:         PrintWriter out = new PrintWriter(file);
+22:         int lineCount = 1;
+23:         String s;
+24:         while((s = in.readLine()) != null) {
+25:             out.println(lineCount++ + ": " + s);
+26:         }
+27:         out.close();
+28:         System.out.println(BufferedInputFile.read(file));
+29:     }
+30: }
+31: 
+32: /**
+33:  * output:
+34:  * 
+35:  */

@@ -1,15 +1,15 @@
-
 /**
- * Author: Bruce Eckel 
  * Thinking in Java
- * @version 4.0 
- */
-
-/**
  *
+ * @version 4th
+ * @author Bruce Eckel
+ * @see http://www.MindView.net
  */
 
-import java.io.*;
+import java.io.ByteArrayInputStream;
+import java.io.DataInputStream;
+import java.io.EOFException;
+import java.io.IOException;
 
 public class FormattedMemoryInput {
     
@@ -26,7 +26,7 @@ public class FormattedMemoryInput {
     }
 }
 
-/*
-output:
-
-*/
+/**
+ * output:
+ * 
+ */

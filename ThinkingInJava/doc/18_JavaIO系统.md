@@ -85,3 +85,69 @@ FilterInputStream 类型：
 ## 18.5 自我独立的类：RandomAccessFile
 
 RandomAccessFile 适用于由大小已知的记录组成的文件，可以使用 seek()将记录从一处转移到另一处，然后读取或修改记录。
+
+## 18.6 I/O 流的典型使用方式
+
+### 18.6.1 缓冲输入文件
+
+```java
+public static String read(String filename) throws IOException {
+    BufferedReader in = new BufferedReader(new FileReader(filename));
+    String s;
+    StringBuilder sb = new StringBuilder();
+    while((s = in.readLine()) != null) {
+        sb.append(s + "\n");
+    }
+    in.close();
+    return sb.toString();
+}
+```
+
+### 18.6.2 从内存输入
+
+```java
+StringReader in = new StringReader(BufferedInputFile.read("MemoryInput.java"));
+int c;
+while((c = in.read()) != -1) {
+    System.out.print((char)c);
+}
+```
+
+### 18.6.3 格式化的内存输入
+
+```java
+DataInputStream in = new DataInputStream(new ByteArrayInputStream(
+            BufferedInputFile.read("FormattedMemoryInput.java").getBytes()));
+while(true) {
+    System.out.print((char)in.readByte());
+}
+```
+
+### 18.6.4 基本的文件输出
+
+FileWriter 对象可以向文件写入数据。
+
+```java
+static String file = "BasicFileOutput.txt";
+// 读操作
+BufferedReader in = new BufferedReader(new StringReader(
+            BufferedInputFile.read("BasicFileOutput.java")));
+// 写操作
+PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(file)));
+
+String s;
+while((s = in.readLine()) != null) {
+    out.println(s);
+}
+out.close();
+```
+
+### 18.6.5 存储和恢复数据
+
+PrintWriter 可以对数据进行格式化，便于人们阅读。为了输出可供一个流恢复的数据，需要用 DataOutputStream 写入数据，并用 DataInputStream 恢复数据。
+
+使用 DataOutputStream 写入数据，Java 保证可以使用 DataInputStream 准确地读取数据，无论读写的平台多么不同。
+
+### 18.6.6 读写随机访问文件
+
+### 18.6.7 管道流

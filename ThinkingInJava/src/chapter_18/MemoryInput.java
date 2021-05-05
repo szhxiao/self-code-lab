@@ -1,15 +1,13 @@
-
 /**
- * Author: Bruce Eckel 
  * Thinking in Java
- * @version 4.0 
- */
-
-/**
  *
+ * @version 4th
+ * @author Bruce Eckel
+ * @see http://www.MindView.net
  */
 
-import java.io.*;
+import java.io.IOException;
+import java.io.StringReader;
 
 public class MemoryInput {
     
@@ -22,7 +20,7 @@ public class MemoryInput {
     }
 }
 
-/*
-output:
-
-*/
+/**
+ * output:
+ * 
+ */
