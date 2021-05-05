@@ -81,3 +81,7 @@ FilterInputStream 类型：
 ### 18.4.2 更改流的行为
 
 ### 18.4.3 未发生变化的类
+
+## 18.5 自我独立的类：RandomAccessFile
+
+RandomAccessFile 适用于由大小已知的记录组成的文件，可以使用 seek()将记录从一处转移到另一处，然后读取或修改记录。
