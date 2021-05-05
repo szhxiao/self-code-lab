@@ -73,3 +73,11 @@ FilterInputStream 类型：
 | DataOutputStream     | 与 DataInputStream 搭配使用，可以按照可移植方式向流中写入基本类型数据 | 构造器参数：OutputStream;包含用于写入基本类型数据的全部接口 |
 | PrintStream          | 用于产生格式化输出                                                    | 构造器参数：OutputStream;可以指示是否在每次换行时清空缓冲区 |
 | BufferedOutputStream | 避免每次发送数据时都要时行实际的写操作，代表“使用缓冲区”              | 构造器参数：OutputStream;可以指定缓冲区大小                 |
+
+## 18.4 Reader 和 Writer 对象
+
+### 18.4.1 数据的来源和去处
+
+### 18.4.2 更改流的行为
+
+### 18.4.3 未发生变化的类
