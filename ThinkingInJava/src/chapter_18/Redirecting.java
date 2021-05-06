@@ -1,24 +1,31 @@
-
 /**
- * Author: Bruce Eckel 
  * Thinking in Java
- * @version 4.0 
+ *
+ * @version 4th
+ * @author Bruce Eckel
+ * @see http://www.MindView.net
  */
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.PrintStream;
 
 /**
- *
+ * Demonstrates standard I/O redirection.
  */
-
-import java.io.*;
-
 public class Redirecting {
-    
     public static void main(String[] args) throws IOException {
+        // 存储最初System.out对象引用
         PrintStream console = System.out;
         BufferedInputStream in = new BufferedInputStream(
                 new FileInputStream("Redirecting.java"));
         PrintStream out = new PrintStream(new BufferedOutputStream(
-                    new FileOutputStream("test.out")));
+                    new FileOutputStream("test_redirecting.txt")));
         System.setIn(in);
         System.setOut(out);
         System.setErr(out);
@@ -28,11 +35,12 @@ public class Redirecting {
             System.out.println(s);
         }
         out.close();
+        // 恢复System.out对象引用
         System.setOut(console);
     }
 }
 
-/*
-output:
-
-*/
+/**
+ * output:
+ * 
+ */

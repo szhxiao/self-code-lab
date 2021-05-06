@@ -1,18 +1,19 @@
-
 /**
- * Author: Bruce Eckel 
  * Thinking in Java
- * @version 4.0 
+ *
+ * @version 4th
+ * @author Bruce Eckel
+ * @see http://www.MindView.net
  */
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 /**
- *
+ * Reads from standard input.
  */
-
-import java.io.*;
-
 public class Echo {
-    
     public static void main(String[] args) throws IOException {
         BufferedReader stdin = new BufferedReader(
                 new InputStreamReader(System.in));
@@ -23,7 +24,7 @@ public class Echo {
     }
 }
 
-/*
-output:
-
-*/
+/**
+ * output:
+ * 
+ */
