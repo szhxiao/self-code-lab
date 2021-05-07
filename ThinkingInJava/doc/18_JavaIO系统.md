@@ -192,4 +192,13 @@ GZIP 适合对单个数据流进行压缩。
 2. Externalizable 的替代方法
 
 ### 18.12.3 使用持久性
+<<<<<<< HEAD
 >>>>>>> 9c1992d... Add 18.12 of chapter_18
+=======
+
+### 18.13 XML
+
+### 18.14 Preferences
+
+Preferences 是一个键－值集合，存储在一个节点层次结构中。
+>>>>>>> 413775d... Add 18.14 of chapter_18
