@@ -1,0 +1,36 @@
+1: /**
+2:  * Thinking in Java
+3:  *
+4:  * @version 4th
+5:  * @author Bruce Eckel
+6:  * @see http://www.MindView.net
+7:  */
+8: 
+9: import java.io.BufferedReader;
+10: import java.io.BufferedWriter;
+11: import java.io.FileWriter;
+12: import java.io.IOException;
+13: import java.io.PrintWriter;
+14: import java.io.StringReader;
+15: 
+16: public class BasicFileOutput {
+17:     static String file = "BasicFileOutput.txt";
+18: 
+19:     public static void main(String[] args) throws IOException {
+20:         BufferedReader in = new BufferedReader(new StringReader(
+21:                     BufferedInputFile.read("BasicFileOutput.java")));
+22:         PrintWriter out = new PrintWriter(new BufferedWriter(new FileWriter(file)));
+23:         int lineCount = 1;
+24:         String s;
+25:         while((s = in.readLine()) != null) {
+26:             out.println(lineCount++ + ": " + s);
+27:         }
+28:         out.close();
+29:         System.out.println(BufferedInputFile.read(file));
+30:     }
+31: }
+32: 
+33: /**
+34:  * output:
+35:  * 
+36:  */
