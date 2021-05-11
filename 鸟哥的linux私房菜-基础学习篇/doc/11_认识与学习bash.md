@@ -144,3 +144,57 @@
     > var[1] = "small min"
 
     建议直接以`${数组}`的方式来读取数组变量。
+
+### 11.2.7 与文件系统及程序的限制关系
+
+> ulimit [-SHacdfltu] [配额]
+
+参数：
+
+-   -H hard limit, 严格的设置，必定不能超过这个设置的数值
+-   -S soft limit, 警告的设置，可以超过这个值，但超过后会有警告
+-   -a 可列出所有的限制额度
+-   -f 此 shell 可创建的最大文件容量，单位为 KB
+-   -d 进程可使用的最大断裂内存容量
+-   -l 用于锁定的内存量
+-   -t 可使用的 CPU 最长时间，单位为秒
+-   -u 单一用户可使用的最大进程数量
+
+### 11.2.8 变量内容的删除、替代与替换
+
+1. 变量内容的删除与替换
+
+    - \# 符合替换文字**最短**的一个
+    - \## 符合替换文字**最长**的一个
+
+2. 变量的测试与内容替换
+
+## 11.3 命令别名与历史命令
+
+### 11.3.1 命令别名设置：alias, unalias
+
+1. alias
+
+    > alias lm='ls -l | more'
+
+2. unalias
+
+    > unalias lm
+
+### 11.3.2 历史命令：history
+
+列出最近的 n 条命令：
+
+> history [n]
+
+清除当前 shell 中的所有 history 内容：
+
+> history [-c]
+
+> history [-raw] histfiles
+
+参数：
+
+-   -a 将目前新增的 history 命令新增入 histfiles
+-   -r 将 histfile 中的内容读入当前 shell 的 history 中
+-   -w 将当前的 history 记忆内容写入 histfiles 中
