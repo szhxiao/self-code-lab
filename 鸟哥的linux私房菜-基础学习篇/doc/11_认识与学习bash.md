@@ -1,3 +1,5 @@
+![第11章 认识与学习bash](../resources/images/11_认识与学习shell.png)
+
 # 第 11 章 认识与学习 bash
 
 ## 11.1 认识 bash 这个 shell
