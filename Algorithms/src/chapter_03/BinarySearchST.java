@@ -1,7 +1,3 @@
-import java.util.NoSuchElementException;
-
-import javax.xml.crypto.NoSuchMechanismException;
-
 /**
  * Algorithms
  *
@@ -10,6 +6,8 @@ import javax.xml.crypto.NoSuchMechanismException;
  *         Kevin Wayne
  * @see http://algs4.cs.princeton.edu
  */
+
+import java.util.NoSuchElementException;
 
 /**
  * 
@@ -293,7 +291,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
      */
     public Key min() {
         if (isEmpty()) {
-            throw new NoSuchMechanismException("called min() with empty symbol table");
+            throw new NoSuchElementException("called min() with empty symbol table");
         }
         return keys[0];
     }
@@ -306,7 +304,7 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
      */
     public Key max() {
         if (isEmpty()) {
-            throw new NoSuchMechanismException("called max() with empty symbol table");
+            throw new NoSuchElementException("called max() with empty symbol table");
         }
         return keys[n - 1];
     }
