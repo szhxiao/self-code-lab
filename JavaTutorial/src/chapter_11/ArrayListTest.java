@@ -9,8 +9,6 @@
 import java.util.ArrayList;
 import java.util.List;
 
-import jdk.nashorn.api.tree.ForInLoopTree;
-
 public class ArrayListTest {
     public static void main(String[] args) {
         // 实例化ArrayList容器
