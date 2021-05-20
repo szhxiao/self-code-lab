@@ -7,6 +7,7 @@
  * @see http://algs4.cs.princeton.edu
  */
 
+import java.util.Iterator;
 import java.util.TreeMap;
 
 public class ST<Key extends Comparable<Key> ,Value>implements Iterable<Key> {
@@ -47,7 +48,7 @@ public class ST<Key extends Comparable<Key> ,Value>implements Iterable<Key> {
      */
     public void put(Key key, Value val) {
         if (key == null) {
-            throw new IllegalAccessException("calls put() with null key");
+            throw new IllegalArgumentException("calls put() with null key");
         }
         if (val == null) {
             st.remove(key);
@@ -64,7 +65,7 @@ public class ST<Key extends Comparable<Key> ,Value>implements Iterable<Key> {
      */
     public void delete(Key key) {
         if (key == null) {
-            throw new IllegalAccessException("calls delete() with null key");
+            throw new IllegalArgumentException("calls delete() with null key");
         }
         st.remove(key);
     }
@@ -79,7 +80,7 @@ public class ST<Key extends Comparable<Key> ,Value>implements Iterable<Key> {
      */
     public boolean contains(Key key) {
         if (key == null) {
-            throw new IllegalAccessException("calls contains() with null key");
+            throw new IllegalArgumentException("calls contains() with null key");
         }
         return st.containsKey(key);
     }
@@ -110,5 +111,15 @@ public class ST<Key extends Comparable<Key> ,Value>implements Iterable<Key> {
      */
     public Iterable<Key> keys() {
         return st.keySet();
+    }
+
+    /**
+     * Returns all of the keys in the symbol table.
+     * 
+     * @return all of the keys in the symbol table
+     */
+    @Override
+    public Iterator<Key> iterator() {
+        return st.keySet().iterator();
     }
 }
