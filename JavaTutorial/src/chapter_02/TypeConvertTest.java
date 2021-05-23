@@ -11,7 +11,7 @@ import java.math.BigDecimal;
 /**
  * 测试类型转换
  */
-public class ArithmeticOperatorTest {
+public class TypeConvertTest {
     public static void main(String[] args) {
         int a = 1123;
         long b = a;
