@@ -15,7 +15,9 @@ public class Menu {
         System.out.println("***** 3 修改记录 *****");
         System.out.println("***** 4 删除记录 *****");
         System.out.println("***** 5 排序记录 *****");
-        System.out.println("***** 6 退出系统 *****");
+        System.out.println("***** 6 输出数据 *****");
+        System.out.println("***** 7 读入数据 *****");
+        System.out.println("***** 8 退出系统 *****");
         System.out.println("********************\n");
     }
 

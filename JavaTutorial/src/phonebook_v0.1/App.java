@@ -25,7 +25,7 @@ public class App {
         while (true) {
             // menu.mainMenu();
             Menu.mainMenu();
-            int item = regex.validateMenuItem(1, 6);
+            int item = regex.validateMenuItem(1, 8);
             switch (item) {
                 case 1:
                     operate.addLogic();
@@ -44,7 +44,12 @@ public class App {
                     break;
                 // case 6:
                 //     System.exit(0);
-            
+                case 6:
+                    operate.outputLogic();
+                    break;
+                case 7:
+                    operate.inputLogic();
+                    break;
                 default:
                     System.exit(0);
                     break;

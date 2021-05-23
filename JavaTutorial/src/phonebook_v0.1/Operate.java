@@ -6,6 +6,10 @@
  * @see 
  */
 
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -147,6 +151,22 @@ public class Operate {
                     return;
             }
         }
+    }
+
+    /**
+     * 输出数据
+     */
+    public void outputLogic() {
+        System.out.println("output -->");
+        outputData();
+    }
+
+    /**
+     * 输出数据
+     */
+    public void inputLogic() {
+        System.out.println("input -->");
+        inputData();
     }
 
     /**
@@ -367,6 +387,59 @@ public class Operate {
         for (int i = 0; i < list.size(); i++) {
             list.get(i).setId(i + 1);
         }
+    }
+
+    /**
+     * 输出数据
+     */
+    public void outputData() {
+        System.out.println("提示：正在输出数据");
+
+        ObjectOutputStream oos = null;
+        try {
+            oos = new ObjectOutputStream(
+                    new FileOutputStream("phonebook.txt"));
+                
+            oos.writeObject(list);
+            oos.flush();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (oos != null) {
+                    oos.close();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        System.out.println("提示：数据输出成功");
+    }
+
+    /**
+     * 读入数据
+     */
+    public void inputData() {
+        System.out.println("提示：正在导入数据");
+
+        ObjectInputStream ois = null;
+        try {
+            ois = new ObjectInputStream(new FileInputStream("phonebook.txt"));
+            list = (List<Person>) ois.readObject();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                if (ois != null) {
+                    ois.close();
+                }
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        System.out.println("提示：数据导入成功");
     }
 
     // 排序类
